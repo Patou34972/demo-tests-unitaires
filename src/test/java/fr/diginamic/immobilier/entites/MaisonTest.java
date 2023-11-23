@@ -34,5 +34,9 @@ class MaisonTest {
 
     @Test
     void TestgetPieces() {
+        Maison maison = new Maison();
+        Cuisine cuisine = new Cuisine(5,23);
+        int resultat = maison.ajouterPiece(cuisine);
+        assertEquals(1, resultat);
     }
 }

@@ -14,9 +14,18 @@ public final class StringUtils {
 	 * @param rhs chaine 2
 	 * @return distance
 	 */
+
 	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) {
+
+		// Ajout du null check
+		if (lhs == null || rhs == null) {
+			return -1;
+		}
+
 		int len0 = lhs.length() + 1;
 		int len1 = rhs.length() + 1;
+
+
 
 		int[] cost = new int[len0];
 		int[] newcost = new int[len0];
@@ -28,7 +37,7 @@ public final class StringUtils {
 		for (int j = 1; j < len1; j++) {
 			newcost[0] = j;
 
-			for (int i = 1; i < len0; i++) {
+            for (int i = 1; i < len0; i++) {
 				int match = (lhs.charAt(i - 1) == rhs.charAt(j - 1)) ? 0 : 1;
 
 				int costReplace = cost[i - 1] + match;
@@ -43,5 +52,7 @@ public final class StringUtils {
 			newcost = swap;
 		}
 		return cost[len0 - 1];
+
 	}
+
 }

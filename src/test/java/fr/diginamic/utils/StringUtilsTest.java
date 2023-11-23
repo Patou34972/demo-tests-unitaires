@@ -19,7 +19,11 @@ class StringUtilsTest {
         resultat = StringUtils.levenshteinDistance("Chien", "Chine");
         assertEquals(resultat,2);
 
-        resultat = StringUtils.levenshteinDistance(null, "Chine");
+        resultat = StringUtils.levenshteinDistance(null, "Chat");
+        assertEquals(resultat,-1);
+        resultat = StringUtils.levenshteinDistance("Machine",null);
+        assertEquals(resultat,-1);
+        resultat = StringUtils.levenshteinDistance("avion",null);
         assertEquals(resultat,-1);
 
 

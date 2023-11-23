@@ -7,26 +7,30 @@ import static org.junit.jupiter.api.Assertions.*;
 class MaisonTest {
 
     @Test
-    void ajouterPiece() {
+    void TestajouterPiece() {
+
     }
 
     @Test
-    void nbPieces() {
+    public void TestnbPieces() {
+        Maison maison= new Maison();
+       /* int resultat = Maison.nbPieces(251, 251);
+        assertEquals(resultat,);*/
     }
 
     @Test
-    void superficieEtage() {
+    void TestsuperficieEtage() {
     }
 
     @Test
-    void superficieTypePiece() {
+    void TestsuperficieTypePiece() {
     }
 
     @Test
-    void calculerSurface() {
+    void TestcalculerSurface() {
     }
 
     @Test
-    void getPieces() {
+    void TestgetPieces() {
     }
 }

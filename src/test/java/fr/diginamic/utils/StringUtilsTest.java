@@ -8,22 +8,23 @@ class StringUtilsTest {
 
     @Test
     void TestlevenshteinDistance() {
-        int resultat = StringUtils.levenshteinDistance("Chat", "Chats");
+        StringUtils stringUtils = new StringUtils();
+        int resultat = stringUtils.levenshteinDistance("Chat", "Chats");
         assertEquals(resultat,1);
-        resultat= StringUtils.levenshteinDistance("machins", "machine");
+        resultat= stringUtils.levenshteinDistance("machins", "machine");
         assertEquals(resultat,1);
-        resultat = StringUtils.levenshteinDistance("aviron", "avion");
+        resultat = stringUtils.levenshteinDistance("aviron", "avion");
         assertEquals(resultat,1);
-        resultat = StringUtils.levenshteinDistance("distance", "instance");
+        resultat = stringUtils.levenshteinDistance("distance", "instance");
         assertEquals(resultat,2);
-        resultat = StringUtils.levenshteinDistance("Chien", "Chine");
+        resultat = stringUtils.levenshteinDistance("Chien", "Chine");
         assertEquals(resultat,2);
 
-        resultat = StringUtils.levenshteinDistance(null, "Chat");
+        resultat = stringUtils.levenshteinDistance(null, "Chat");
         assertEquals(resultat,-1);
-        resultat = StringUtils.levenshteinDistance("Machine",null);
+        resultat = stringUtils.levenshteinDistance("Machine",null);
         assertEquals(resultat,-1);
-        resultat = StringUtils.levenshteinDistance("avion",null);
+        resultat = stringUtils.levenshteinDistance("avion",null);
         assertEquals(resultat,-1);
 
 

@@ -6,7 +6,7 @@ package fr.diginamic.immobilier.entites;
 public class Maison {
 	
 	/** pieces : tableau de pièces de la maison */
-	private Piece[] pieces;
+	private static Piece[] pieces;
 	
 	/**
 	 * Constructeur
@@ -16,10 +16,13 @@ public class Maison {
 		pieces = new Piece[0];
 	}
 
-	/** Ajoute une pièce à la maison
+	/**
+	 * Ajoute une pièce à la maison
+	 *
 	 * @param nvPiece nouvelle pièce à ajouter
+	 * @return
 	 */
-	public void ajouterPiece(Piece nvPiece) {
+	public int ajouterPiece(Piece nvPiece) {
 		
 		// On est obligé d'agrandir le tableau initial de 1 à chaque ajout
 		// d'une nouvelle pièce
@@ -39,10 +42,11 @@ public class Maison {
 		
 		// Enfin on affecte newTab à pieces
 		this.pieces=newTab;
+		return 0;
 	}
 	
-	public int nbPieces() {
-		return pieces.length-1;
+	public int nbPieces(Chambre chambre) {
+		return pieces.length;
 	}
 
 	/** Retourne la superficie d'un étage

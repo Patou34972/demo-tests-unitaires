@@ -8,14 +8,16 @@ class MaisonTest {
 
     @Test
     void TestajouterPiece() {
+        Maison maison = new Maison();
+        Chambre chambre = new Chambre(5,23);
+        int resultat = maison.ajouterPiece(chambre);
+        assertEquals(1, resultat);
 
     }
 
     @Test
     public void TestnbPieces() {
-        Maison maison= new Maison();
-       /* int resultat = Maison.nbPieces(251, 251);
-        assertEquals(resultat,);*/
+
     }
 
     @Test
